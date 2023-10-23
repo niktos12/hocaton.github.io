@@ -409,14 +409,16 @@ body{
                     padding: 0;
                 }
                 .hac1{
-                    background-image: url(/imgs/event.png);
+                    background-image: url(/imgs/image\ 15.png);
                     max-height: 290px;
                     display: flex;
                     flex-direction: row;
                     align-items: flex-start;
                     gap: 10px;
-                    max-width: 886px;
                     justify-content: space-between;
+                    max-width: 886px;
+                    background-size: contain;
+                    background-repeat: no-repeat;
                     @include desktop(){
                         display: flex;
                         background-size:contain;
@@ -431,7 +433,7 @@ body{
                         justify-content: space-around;
                     }
                     .haca1{
-                        margin: 150px 0px 35px 35px;
+                        margin: 100px 0px 35px 35px;
                         font-family: Montserrat ,sans-serif;
                         font-size: 20px;
                         @include desktop(){
@@ -458,7 +460,7 @@ body{
                         }
                     }
                     .Prize1{
-                        margin: 170px 35px 0px 56px;
+                        margin: 100px 35px 0px 56px;
                         font-family: Montserrat ,sans-serif;
                         @include desktop(){
                             font-size: 16px;
@@ -515,7 +517,7 @@ body{
                         justify-content: space-around;
                     }
                     .haca2{
-                        margin: 150px 0px 35px 35px;
+                        margin: 100px 0px 35px 35px;
                         font-family: Montserrat ,sans-serif;
                         font-size: 20px;
                         @include desktop(){
@@ -543,7 +545,7 @@ body{
                         }
                     }
                     .Prize2{
-                        margin: 170px 35px 0px 56px;
+                        margin: 100px 35px 0px 56px;
                         font-family: Montserrat ,sans-serif;
                         font-size: 18px;
                         @include desktop(){
