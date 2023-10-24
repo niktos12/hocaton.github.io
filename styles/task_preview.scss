@@ -1,0 +1,586 @@
+$breakpoint_desktop: 1625px;
+$breakpoint_laptop: 1382px;
+$breakpoint_small_laptop: 1365px;
+$breakpoint_tabletHorizontal: 1023px;
+$breakpoint_tabletVertical: 767px;
+$breakpoint_mobile: 424px;
+$breakpoint_small_mega_mobile:335px;
+$breakpoint_small_mobile:335px;
+$breakpoint_for_text_schedule: 581px;
+$breakpoint_for_grid:1199px;
+$breakpoint_icon_header:930px;
+$breakpoint_for_text:492px;
+$breakpoint_for_haca:457px;
+$breakpoint_for_text_final:356px;
+@mixin miniText(){
+    @media (max-width: $breakpoint_for_text_final){
+        @content
+    }
+};
+@mixin finalText(){
+    @media (max-width: $breakpoint_for_text){
+        @content   
+    }
+};
+@mixin finalHaca(){
+    @media (max-width: $breakpoint_for_haca){
+        @content
+    }
+};
+@mixin grid(){
+    @media (max-width: $breakpoint_for_grid){
+        @content
+    }
+};
+@mixin desktop(){
+    @media (max-width:$breakpoint_desktop){
+        @content
+    }
+};
+@mixin laptop(){
+    @media (max-width: $breakpoint_laptop){
+        @content
+    }
+};
+@mixin smallLaptop(){
+    @media (max-width:$breakpoint_small_laptop){
+        @content
+    }
+};
+@mixin horizontalTable(){
+    @media (max-width: $breakpoint_tabletHorizontal){
+        @content
+    }
+};
+@mixin verticalTable(){
+    @media (max-width: $breakpoint_tabletVertical){
+        @content
+    }
+};
+@mixin adaptiveText(){
+    @media (max-width: $breakpoint_for_text_schedule){
+        @content;
+    }
+}
+@mixin smallVerticalTable(){
+    @media (max-width: $breakpoint_small_tabletVertical){
+        @content
+    }
+};
+@mixin defaultMobile(){
+    @media (max-width: $breakpoint_mobile){
+        @content
+    }
+};
+@mixin smallMobile(){
+    @media (max-width: $breakpoint_small_mobile){
+        @content
+    }
+};
+@mixin megaSmallMobile(){
+    @media (max-width: $breakpoint_small_mega_mobile){
+        @content
+    }
+};
+@mixin iconHeader(){
+    @media (max-width: $breakpoint_icon_header){
+        @content
+    }
+};
+:root{
+    --container: 1600px;
+    @include laptop{
+        --container:1600px;
+    }
+    @include smallLaptop(){
+        --container: 1400px;
+    };
+    @include horizontalTable{
+        --container: 1240px;
+    };
+    @include verticalTable{
+        --container: 880px;
+    };
+    @include defaultMobile{
+        --container: 375px;
+    };
+};
+
+
+
+.container{
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+
+
+
+
+body{
+    background-color: #1E1E1E;
+    @include iconHeader(){
+        margin: 0;
+    }
+    header{
+        display: flex;
+        padding: 10px 142px;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 100%;
+        border-bottom: #3949DB 1px solid;
+        margin-bottom: 100px;
+        @include horizontalTable(){
+            padding-right: 50px;
+        }
+        .header{
+            display: flex;
+            font-family: 'Montserrat', sans-serif;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 45px;
+            max-width: 100%;
+            width: 100%;
+            .icon-header{
+                display: none;
+                @include iconHeader(){
+                    display: flex;
+                }
+            }
+            .btn-login{
+                border: none;
+                margin-left: 100px;
+                padding: 12px 28px;
+                display: flex;
+                border-radius: 20px;
+                background: #3949DB;
+                color: #fff;
+                font-size: 20px;
+                font-family: Montserrat, sans-serif;
+                font-weight: 600;
+                cursor: pointer;
+                @include desktop(){
+                    font-size: 16px;
+                }
+                @include laptop(){
+                    font-size: 14px;
+                }
+                @include grid(){
+                    font-size: 12px;
+                    margin-left: 0px;
+                }
+                @include horizontalTable(){
+                    font-size: 10px;
+                }
+                @include iconHeader(){
+                    display: none;
+                }
+            }
+            .logo{
+                margin-right: 145px;
+                cursor: pointer;
+                @include desktop(){
+                    max-width: 15%;
+                    margin-right: 80px;
+                }
+                @include laptop(){
+                    max-width: 17%;
+                    margin-left: -100px;
+                }
+                @include grid(){
+                    max-width: 15%;
+                }
+                @include iconHeader(){
+                    max-width: 45%;
+                }
+                @include adaptiveText(){
+                    max-width: 100%;
+                }
+            }
+            .nav{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                .a-nav{
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    margin-right: 40px;
+                    text-decoration: none;
+                    color: #fff;
+                    font-size: 20px;
+                    @include desktop(){
+                        font-size: 16px;
+                    }
+                    @include laptop(){
+                        font-size: 14px;
+                    }
+                    @include grid(){
+                        font-size: 12px;
+                    }
+                    @include horizontalTable(){
+                        font-size: 10px;
+                    }
+                    @include iconHeader(){
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+main{
+    margin-bottom: 100px;
+    .main{
+        .main-h1{
+            color: #FFF;
+
+            font-family: Montserrat,sans-serif;
+            font-size: 32px;
+            font-style: normal;
+            font-weight: 700;
+            text-align:center;
+            @include grid(){
+                font-size: 24px;
+            }
+            @include verticalTable(){
+                font-size: 20px;
+            }
+            @include finalHaca(){
+                font-size: 18px;
+            }
+        }
+        .requirements{
+            display: flex;
+            flex-direction: column;          
+            color: #fff;
+            .requirement{
+                .li-h3{
+                color: #FFF;
+                font-family: Montserrat,sans-serif;
+                font-size: 24px;
+                font-weight: 500;
+                margin-bottom: 10px;
+                margin-top: 30px;
+                text-align: left;
+                @include grid(){
+                    font-size: 20px;
+                }
+                @include verticalTable(){
+                    font-size: 16px;
+                }
+                @include finalHaca(){
+                    font-size: 14px;
+                }
+                }
+                .description{
+                    color: #FFF;
+                    font-family: Montserrat,sans-serif;
+                    font-size: 20px;
+                    font-weight: 400;
+                    list-style-type: disc;
+                    text-align: left;
+                    line-height: 28px;
+                    .ul-li{
+                        font-size: 20px;
+                        color: #fff;
+                        font-family: Montserrat,sans-serif;
+                        margin-left: -20px;
+                        gap: 10px;
+                        @include grid(){
+                            font-size: 16px;
+                        }
+                        @include verticalTable(){
+                            font-size: 14px;
+                        }
+                        @include finalHaca(){
+                            font-size: 12px;
+                        }
+                    }
+                }
+            
+            }
+        }
+        .schedule{
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 100px;
+        max-width: 100%;
+        margin-top: 150px;
+        @include grid(){
+            max-width: 90%;
+            justify-self: center;
+            margin: 0 auto;
+        }
+        }
+    }
+}
+footer{
+    border-top: 2px solid #3949DB;
+    .footer{
+        display: flex;
+        padding: 70px 142px;
+        justify-content: space-between;
+        align-items: center;
+        align-self: stretch;
+        @include desktop(){
+            padding: 70px 0px;
+        }
+        @include horizontalTable(){
+            display: flex;
+            flex-direction: column;
+            padding-top: 40px;
+        }
+        .footer-nav-grid{
+            display: flex;
+            flex-direction: row;
+            @include horizontalTable(){
+                display: flex;
+                flex-direction: row;
+                gap: 71px;
+            }
+        }
+        .logo-footer{
+            @include desktop(){
+                max-width: 10%;
+                margin-left: 0px;
+            }
+            @include laptop(){
+                max-width: 13%;
+            }
+            @include grid(){
+                max-width: 15%;
+            }
+            @include horizontalTable(){
+                max-width: 25%;
+                margin-top: 0;
+                margin-bottom: 40px;
+            }
+            @include iconHeader(){
+                max-width: 30%;
+            }
+            @include adaptiveText(){
+                max-width: 100%;
+            }
+        }
+        .footer-nav{
+            display: flex;
+            flex-direction: column;
+            margin-right: 60px;
+            margin-left: 0;
+            @include horizontalTable(){
+                margin-bottom: 20px;
+            }
+
+            .footer-nav-a:nth-of-type(1){
+                font-weight: 600;
+            }
+            .footer-nav-a{
+                font-size: 20px;
+                text-decoration: none;
+                color: #fff;
+                font-weight: 400;
+                margin-bottom: 16px;
+                font-family: Montserrat ,sans-serif;
+                margin-right: 0;
+                @include desktop(){
+                    font-size: 16px;
+                }
+                @include laptop(){
+                    font-size: 14px;
+                }
+                @include grid(){
+                    font-size: 12px;
+                }
+                
+            }
+
+        
+
+        }
+        .footer-nav-2{
+            display: flex;
+            flex-direction: column;
+            .footer-nav-a2{
+                font-size: 20px;
+                text-decoration: none;
+                color: #fff;
+                font-weight: 400;
+                margin-bottom: 16px;
+                font-family: Montserrat ,sans-serif;
+                @include desktop(){
+                    font-size: 16px;
+                }
+                @include laptop(){
+                    font-size: 14px;
+                }
+                @include grid(){
+                    font-size: 12px;
+                }
+                
+            }
+        }
+        .contact{
+            @include horizontalTable(){
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 50px;
+                margin-top: 20px;
+                margin-left: -70px;
+            }
+            .h3-contact{
+                font-family: Montserrat,sans-serif;
+                font-size: 24px;
+                font-weight: 600;
+                color: #fff;
+                margin-bottom: 0;
+                margin-top: -30px;
+                @include desktop(){
+                    font-size: 16px;
+                }
+                @include laptop(){
+                    font-size: 14px;
+                }
+                @include grid(){
+                    font-size: 12px;
+                }
+                
+            }
+            .contact-email{
+                display: flex;
+                flex-direction: row;
+                .email-icon{
+                    @include adaptiveText(){
+                        width: 20px;
+                        height: 20px;
+                        margin-top: 10px;
+                        
+                    }
+                }
+                .email-p{
+                    color: #FFF;
+                    font-family: Montserrat;
+                    font-size: 20px;
+                    font-weight: 400;
+                    margin-left: 8px;
+                    @include desktop(){
+                        font-size: 16px;
+                    }
+                    @include laptop(){
+                        font-size: 14px;
+                    }
+                    @include grid(){
+                        font-size: 12px;
+                    }
+                    
+                }
+            }
+            .contact-tele{
+                display: flex;
+                flex-direction: row;
+                .icon-phone{
+                    width: 20px;
+                    height: 20px;
+                    @include adaptiveText(){
+                        width: 15px;
+                        height: 15px;
+                        text-align: center;
+                    }
+                    
+                }
+                .tele-p{
+                    color: #FFF;
+                    font-family: Montserrat;
+                    font-size: 20px;
+                    font-weight: 400;
+                    margin-left: 8px;
+                    margin-top: 0;
+                    @include desktop(){
+                        font-size: 16px;
+                    }
+                    @include laptop(){
+                        font-size: 14px;
+                    }
+                    @include grid(){
+                        font-size: 12px;
+                    }
+                    
+                }
+            }
+        }
+        .social-news{
+            display: flex;
+            flex-direction: column;
+            @include horizontalTable(){
+                max-width: 290px;
+            }
+            .h2-social{
+                color: #3949DB;
+                font-family: Montserrat,sans-serif;
+                font-size: 24px;
+                font-weight: 600;
+                margin-top: -20px;
+                margin-bottom: 0;
+                @include desktop(){
+                    font-size: 18px;
+                }
+                @include laptop(){
+                    font-size: 16px;
+                }@include grid(){
+                    font-size: 14px;
+                }
+                @include horizontalTable(){
+                    font-size: 12px;
+                }
+                
+            }
+            .p-social{
+                color: #FFF;
+                font-family: Montserrat,sans-serif;
+                font-size: 16px;
+                font-weight: 400;
+                max-width: 468px;
+                margin-top: 8px;
+                margin-bottom: 0;
+                @include desktop(){
+                    font-size: 14px;
+                }
+                @include grid(){
+                    font-size: 12px;
+                }
+                @include horizontalTable(){
+                    font-size: 10px;
+                }
+
+            }
+            .input-social{
+                border-radius: 15px;
+                border: 1px solid #3949DB;
+                background: #1E1E1E;
+                color: #fff;
+                font-family: Montserrat,sans-serif;
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 400;
+                padding: 10px 20px;
+                margin-top: 24px;
+                @include desktop(){
+                    font-size: 16px;
+                }
+                @include laptop(){
+                    font-size: 14px;
+                }
+                @include grid(){
+                    font-size: 12px;
+                }
+                @include horizontalTable(){
+                    font-size: 12px;
+                    padding: 10px 10px;
+                }
+                
+            }
+        }
+    }
+}
+
+}
