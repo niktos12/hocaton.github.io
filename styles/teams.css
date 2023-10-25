@@ -433,13 +433,17 @@ header .header .nav .a-nav {
     height: 30px;
   }
 }
-.main .members .members-list .btn-chat-curator {
+.main .members .members-list a {
+  text-decoration: none;
+}
+.main .members .members-list a .btn-chat-curator {
   display: flex;
   padding: 12px 48px;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 10px;
+  text-decoration: none;
   cursor: pointer;
   border-radius: 20px;
   background: #3949DB;
@@ -451,17 +455,17 @@ header .header .nav .a-nav {
   font-weight: 600;
 }
 @media (max-width: 1625px) {
-  .main .members .members-list .btn-chat-curator {
+  .main .members .members-list a .btn-chat-curator {
     font-size: 16px;
   }
 }
 @media (max-width: 1382px) {
-  .main .members .members-list .btn-chat-curator {
+  .main .members .members-list a .btn-chat-curator {
     font-size: 14px;
   }
 }
 @media (max-width: 1199px) {
-  .main .members .members-list .btn-chat-curator {
+  .main .members .members-list a .btn-chat-curator {
     font-size: 12px;
   }
 }
@@ -655,7 +659,10 @@ header .header .nav .a-nav {
     margin: 0 auto;
   }
 }
-.schelude .btn-schelude {
+.schelude a {
+  text-decoration: none;
+}
+.schelude a .btn-schelude {
   display: flex;
   padding: 12px 28px;
   flex-direction: column;
@@ -673,22 +680,22 @@ header .header .nav .a-nav {
   margin-right: 130px;
 }
 @media (max-width: 1625px) {
-  .schelude .btn-schelude {
+  .schelude a .btn-schelude {
     font-size: 16px;
   }
 }
 @media (max-width: 1382px) {
-  .schelude .btn-schelude {
+  .schelude a .btn-schelude {
     font-size: 14px;
   }
 }
 @media (max-width: 1199px) {
-  .schelude .btn-schelude {
+  .schelude a .btn-schelude {
     font-size: 12px;
   }
 }
 @media (max-width: 581px) {
-  .schelude .btn-schelude {
+  .schelude a .btn-schelude {
     font-size: 10px;
     text-align: center;
     margin-top: 20px;
